@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/screen/categories.dart';
 import 'package:meals_app/screen/favorite_screen.dart';
+import 'package:meals_app/widgets/main_drawer.dart';
 
 class TabsScreen extends StatefulWidget {
   static const String routeName = '/';
@@ -28,6 +29,7 @@ class _TabsScreenState extends State<TabsScreen> {
         title: Text(pages[_selectedPageIndex]['title']),
       ),
       body: pages[_selectedPageIndex]['page'],
+      drawer: MainDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         onTap: _handleTabSelect,
         unselectedItemColor: Colors.white,
